@@ -10,19 +10,43 @@ package Logica_Negocio;
  */
 public class Atleta {
  
-    private String nombre;
-    private String nacionalidad;
-    private int hora;
-    private int minutos;
+    private String Nombre;
+    private String Nacionalidad;
+    private double Tiempo;
+    
+   
 
     public Atleta() {
     }
 
-    public Atleta(String nombre, String nacionalidad, int hora, int minutos) {
-        this.nombre = nombre;
-        this.nacionalidad = nacionalidad;
-        this.hora = hora;
-        this.minutos = minutos;
+    public Atleta(String Nombre, String Nacionalidad, double Tiempo) {
+        this.Nombre = Nombre;
+        this.Nacionalidad = Nacionalidad;
+        this.Tiempo = Tiempo;
     }
-   
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getNacionalidad() {
+        return Nacionalidad;
+    }
+
+    public void setNacionalidad(String Nacionalidad) {
+        this.Nacionalidad = Nacionalidad;
+    }
+
+    public double getTiempo() {
+        return Tiempo;
+    }
+
+    public void setTiempo(double Tiempo) {
+        this.Tiempo = Tiempo;
+    }
+    
 }
