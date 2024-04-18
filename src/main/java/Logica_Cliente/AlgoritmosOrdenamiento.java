@@ -102,8 +102,11 @@ public static void ordenarPorSeleccion (){
         if (actual.getTiempo()<menor.getTiempo()){
             menor =actual;
             posMenor=1;
-            
+          
         }
     }
+    Atleta temp = atletas.get(0);
+    atletas.set(0, menor);
+    atletas.set(posMenor, temp);
 }
 }
