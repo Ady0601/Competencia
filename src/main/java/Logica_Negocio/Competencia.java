@@ -13,7 +13,8 @@ public class Competencia {
        atletas = new ArrayList<>();
      }
      public void registrarAtleta (String nombre, String nacionalidad, double tiempo){
-     Atleta nuevoAtleta =new Atleta(nombre, nacionalidad,tiempo);
+     Atleta nuevoAtleta =new Atleta(nombre, nacionalidad);
+     Atleta nuevoAtleta1 =new Atleta(tiempo);
      atletas.add(nuevoAtleta);
     
      }
