@@ -27,7 +27,7 @@ static Scanner lec= new Scanner(System.in);
      System.out.println("Escribir el numero de tiempos a ingresar");
      int input =lec.nextInt();
      for (int i =0 ; i< input ; i++){
-         System.out.println("Digite el tiempo del atleta numero: 0"+i);
+         System.out.println("Digite el tiempo del atleta numero: "+i);
          double tiempoAtleta=lec.nextDouble();
        registrarTiempos(tiempoAtleta);
       
@@ -46,6 +46,8 @@ static Scanner lec= new Scanner(System.in);
          option= lec.nextInt();
          switch (option){
              case 1:
+                 ordenarPorSeleccion();
+                 mostrarTiempos(input);
                  break;
                          case 2:
                              ordenarPorInsercion();
@@ -95,18 +97,21 @@ static Scanner lec= new Scanner(System.in);
     }
 
 public static void ordenarPorSeleccion (){
-    Atleta menor =atletas.get(0);
-    int posMenor=0;
+    for (int i=0 ; i<atletas.size()-1;i++){
+    Atleta menor =atletas.get(i);
+    int posMenor=i;
+    
     for (int j=1;j <atletas.size();j++){
         Atleta actual=atletas.get(j);
         if (actual.getTiempo()<menor.getTiempo()){
             menor =actual;
-            posMenor=1;
+            posMenor=j;
           
         }
     }
     Atleta temp = atletas.get(0);
     atletas.set(0, menor);
     atletas.set(posMenor, temp);
+}
 }
 }
