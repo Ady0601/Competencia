@@ -55,6 +55,8 @@ static Scanner lec= new Scanner(System.in);
                              
                              break;
                                      case 3:
+                                         ordenarPorBurbuja();
+                                         mostrarTiempos(input);
                                          break;
                                      case 4:
                                          System.exit(input);
@@ -113,5 +115,18 @@ public static void ordenarPorSeleccion (){
     atletas.set(0, menor);
     atletas.set(posMenor, temp);
 }
+}
+public static void  ordenarPorBurbuja(){
+    int n=atletas.size();
+    for (int i=0; i <n -1;i++){
+        for(int j=0;j<n-i;j++){
+                Atleta uno= atletas.get(j);
+                Atleta dos= atletas.get(j+1);
+                if (uno.getTiempo()>dos.getTiempo()){
+                   atletas.set(j, dos);
+                   atletas.set(j+1, uno);
+            }
+        }
+    }
 }
 }
